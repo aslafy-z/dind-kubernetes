@@ -15,14 +15,17 @@ There is only one requirement: your Docker version should support the
 ## Quickstart
 
 Build the image:
-```docker build -t dind-kubernetes.
+```bash
+docker build -t dind-kubernetes.
 ```
 then run:
-```docker run --privileged -t -i --net="host" dind-kubernetes
+```bash
+docker run --privileged -t -i --net="host" dind-kubernetes
 ```
 
 Or run the image without building:
-```docker run --privileged -t -i --net="host" llamashoes/dind-kubernetes
+```bash
+docker run --privileged -t -i --net="host" llamashoes/dind-kubernetes
 ```
 
 Using --net="host" allows the pods/services that will start in the local
