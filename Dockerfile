@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER jerome.petazzoni@docker.com
+MAINTAINER rgifford@gmail.com
 
 # Let's start with some basic stuff.
 RUN apt-get update -qq
@@ -42,4 +42,6 @@ RUN chmod +x /start.sh
 
 # Define additional metadata for our image.
 VOLUME /var/lib/docker
+
+# Start supervisord
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
