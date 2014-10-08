@@ -25,4 +25,6 @@ docker run --privileged -t -i --net="host" llamashoes/dind-kubernetes
 ```
 
 Using --net="host" allows the pods/services that will start in the local
-cluster to be visible on the host. 
+cluster to be visible on the host.
+
+You can then make api calls to kubernetes apiserver running on <yourip>:8080
