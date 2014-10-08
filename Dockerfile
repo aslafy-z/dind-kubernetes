@@ -35,6 +35,7 @@ RUN cp /repos/kubernetes/third_party/etcd/bin/* /usr/bin/
 
 # Open apisever to all interfaces
 RUN sed -i '/API_HOST=${API_HOST:-127.0.0.1}/ c\API_HOST=${API_HOST:-0.0.0.0}' /repos/kubernetes/hack/local-up-cluster.sh
+RUN sed -i '/API_PORT=${API_PORT:-8080}/ c\API_PORT=${API_PORT:-8888}' /repos/kubernetes/hack/local-up-cluster.sh
 WORKDIR /
 
 ADD start.sh /start.sh
