@@ -33,7 +33,7 @@ ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local
 # Install etcd
 WORKDIR /repos/kubernetes
 RUN hack/travis/install-etcd.sh
-RUN cp third_party/etcd/bin/* /usr/bin/
+RUN cp third_party/etcd/* /usr/bin/
 
 # Open apisever to all interfaces
 RUN sed -i '/API_HOST=${API_HOST:-127.0.0.1}/ c\API_HOST=${API_HOST:-0.0.0.0}' /repos/kubernetes/hack/local-up-cluster.sh
