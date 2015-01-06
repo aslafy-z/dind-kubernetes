@@ -32,7 +32,7 @@ ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local
 
 # Install etcd
 WORKDIR /repos/kubernetes
-RUN hack/install-etcd.sh
+RUN hack/travis/install-etcd.sh
 RUN cp /repos/kubernetes/third_party/etcd/bin/* /usr/bin/
 
 # Open apisever to all interfaces
